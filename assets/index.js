@@ -16,3 +16,18 @@ function fetchApi(word) {
     .then((res) => res.json())
     .then((result) => data(result, word));
 }
+
+
+const data = (res, text) => {
+  console.log(res);
+  
+}
+
+searchInput.addEventListener('keydown', (e) => {
+  if (e.keyCode === 13){
+    e.preventDefault();
+
+    console.log("pressed enter");
+    fetchApi();
+  }
+});
