@@ -52,7 +52,7 @@ const data = (res, text) => {
 
 //search function
 const search = () => {
-  
+
 }
 //when Enter key is pressed
 searchInput.addEventListener('keydown', (e) => {
@@ -70,4 +70,12 @@ searchInput.addEventListener('change', function (e) {
 
   //set text value to the fetch api
   fetchApi(this.value);
+});
+
+removeIcon.addEventListener('click', () => {
+  searchInput.value = "";
+  searchInput.focus();
+  wrapper.classList.remove("active");
+  infoText.style.color = "#9A9A9A";
+  infoText.innerHTML = `Type a word and press enter`;
 });
