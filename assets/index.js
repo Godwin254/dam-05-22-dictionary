@@ -51,7 +51,10 @@ const data = (res, text) => {
 
 
 //search function
-const search = () => {
+const search = (word) => {
+  searchInput.value = word;
+  fetchApi(word);
+  wrapper.classList.remove("active");
 
 }
 //when Enter key is pressed
